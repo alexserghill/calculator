@@ -1,0 +1,98 @@
+﻿.calc {
+    margin: 100px auto;
+    width: 770px;
+    height: 342px;
+    border-radius: 10px;
+    background:rgb(25, 25, 25);
+    color: #fff;
+    font-family: Arial;
+    padding: 10px;
+}
+
+.calc-screen {
+    height: 80px;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid rgb(75, 75, 75);
+    border-radius: 10px;
+    display: grid;
+    justify-items: end;
+    align-items: end;
+}
+
+.calc-screen p {
+    width: 745px;
+    text-overflow: clip;
+    overflow: hidden;
+    white-space: nowrap;
+    direction: rtl;
+    unicode-bidi:bidi-override;
+
+    font-size: 2.5rem;
+    margin: 0px;
+    margin-right: 5px;
+    user-select: none; /* Предотвращение выделения текста в поле вывода*/
+}
+
+.buttons {
+    display: grid;
+    grid-template-areas:
+    "raddeg raddeg factorial opbr clbr percent clear"
+    "inv sin ln seven eight nine divide"
+    "pi cos log four five six times"
+    "e tan sqrt one two three minus"
+    "ans exp pow zero dot equal plus";
+    grid-gap: 10px;
+    justify-items: center;
+}
+
+.btn {
+    width: 100px;
+    height: 40px;
+    background: rgb(75, 75, 75);
+    border-radius: 5px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.btn:hover {
+    filter: brightness(125%);
+}
+
+.btn:active {
+    filter: brightness(75%);
+}
+
+.btn.dark {
+    background: rgb(50, 50, 50);
+}
+
+.btn.color {
+    background:blueviolet
+}
+
+.btn.raddeg {
+    grid-area: raddeg;
+    width: 213px;
+    display: grid;
+    grid-template-areas: "rad pipe deg";
+    justify-items: center;
+}
+
+.deg, .pipe {
+    color: rgb(150, 150, 150);
+}
+
+.pipe {
+    width: 1px;
+}
+
+.rad, .deg {
+    width: 106px;
+}
+
+.adjust {
+    line-height: 30px;
+}
